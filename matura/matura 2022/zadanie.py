@@ -26,11 +26,11 @@ len_max_roznych_czynnikow = 0
 for czynniki in czynniki_pierwsze_liczb:
     if len_max_czynnikow < len(czynniki):
         index_max_czynnikow = czynniki_pierwsze_liczb.index(czynniki)
-    len_max_czynnikow = max(len_max_czynnikow, len(czynniki))
+        len_max_czynnikow = len(czynniki)
     czynniki_set = set(czynniki)
     if len_max_roznych_czynnikow < len(czynniki_set):
         index_roznych_czynnikow = czynniki_pierwsze_liczb.index(czynniki)
-    len_max_roznych_czynnikow = max(len_max_roznych_czynnikow, len(czynniki_set))
+        len_max_roznych_czynnikow = len(czynniki_set)
 
 print(liczby[index_max_czynnikow], len_max_czynnikow, liczby[index_roznych_czynnikow], len_max_roznych_czynnikow)
 
