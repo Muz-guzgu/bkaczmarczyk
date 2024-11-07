@@ -62,4 +62,3 @@ for wiersz in wiersze1:
         else:
             index = alfabet.index(litera)
             napis = napis.replace(litera,alfabet[index + 1], 1)
-print(napis)
