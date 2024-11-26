@@ -52,8 +52,11 @@ def zapisz_plik(nazwa, dane):
 
 
 if __name__ == "__main__":
-    dane_liczby = wczytaj_plik("bin_przyklad.txt")[1]
-    dane_binarne = wczytaj_plik("bin_przyklad.txt")[0]
+    dane_liczby = wczytaj_plik("bin.txt")[1]
+    dane_binarne = wczytaj_plik("bin.txt")[0]
     dane_zad_2_2 = zad_2_2(dane_liczby)
     dane_zad_2_3 = zad_2_3(dane_binarne)
-    dane_zad_2_5 = zad_2_5(dane_binarne, dane_liczby)
+    dane_zad_2_5 = "\n".join(zad_2_5(dane_binarne, dane_liczby))
+    dane_wszystkich = f"2.2 {dane_zad_2_2}\n2.3 {dane_zad_2_3}"
+    zapisz_plik("wyniki2.txt", dane_wszystkich)
+    zapisz_plik("wyniki2_5.txt", dane_zad_2_5)
